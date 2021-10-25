@@ -4,13 +4,12 @@ from math import e #Untuk memanggil bilangan eksponen natural (e)
 
 # Mendefinisikan fungsi
 def f(x):
-  return e*x-5*x*2
+  return e**x-5*x**2
 
 # Sesi Input Nilai Awal yang dikonversi ke pecahan
 x0 = float(input('x0: '))
 x1 = float(input('x1: '))
 eps = float(input('epsilon : '))
-
 
 # Metode Bagi Dua
 def bisection(x0,x1,eps):

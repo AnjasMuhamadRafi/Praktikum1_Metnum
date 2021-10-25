@@ -4,21 +4,20 @@ from math import e #Untuk memanggil bilangan eksponen natural (e)
 
 # Mendefinisikan fungsi
 def f(x):
-  return e*x-5*x*2
+  return e**x-5*x**2
 
 # Sesi Input Nilai Awal yang dikonversi ke pecahan
 x0 = float(input('x0: '))
 x1 = float(input('x1: '))
 eps = float(input('epsilon : '))
 
-
-# Metode Bagi Dua
-def bisection(x0,x1,eps):
+# Metode Regulafalsi
+def regulafalse(x0,x1,eps):
     step = 1
-    print('\n\n --Metode Bagi Dua-- *')
+    print('\n\n*** ---MOTODE REGULAFALSI--- ***')
     condition=True
     while condition:
-      x2=(x0+x1)/2
+      x2=x1-(f(x1)*(x1-x0)/(f(x1)-f(x0)))
       print('Iterasi-%d, x2 = %0.6f dan f(x2) = %0.6f' % (step, x2, f(x2)))
       if f(x0) * f(x2) < 0:
           x1 = x2
@@ -40,4 +39,4 @@ if f(x0) * f(x1) > 0.0:
     print('Nilai yang diprediksi tidak mengurung akar')
     print('Silahkan mencoba ulang prediksi nilai baru')
 else:
-    bisection (x0,x1,eps)
+    regulafalse (x0,x1,eps)
