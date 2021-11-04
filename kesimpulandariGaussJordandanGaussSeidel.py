@@ -1,0 +1,2 @@
+message = 'Kesimpulan dari Gauss Jordan dan Seidel'
+print ("Updated String :-", message[:0] + 'sama-sama dapat menyelesaikan sistem penyelasaian linier hanya saja gauss-jordan masih menggunakan matriks sedangkan gauss-seidel lebih efisien.')
